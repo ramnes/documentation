@@ -52,10 +52,6 @@ Create a new domain. See examples below.
 
 Delete a domain from your account.
 
-.. note:: Mailgun imposes a rate limit for the Domains API endpoint. Users may 
-		  issue no more than 300 requests per minute, per account. See the resultant
-		  rate limit response below. 
-
 .. code-block:: url
 
      GET /domains/<domain>/credentials
@@ -97,7 +93,7 @@ Updates the specified SMTP credentials. Currently only the password can be chang
  ================= ==========================================================
  Parameter         Description
  ================= ==========================================================
- password          An updated password for the SMTP credentials. (Length Min 5, Max 32)
+ password          A password for the SMTP credentials. (Length Min 5, Max 32)
  ================= ==========================================================
 
 .. code-block:: url
@@ -106,6 +102,9 @@ Updates the specified SMTP credentials. Currently only the password can be chang
 
 Deletes the defined SMTP credentials.
 
+.. note:: Mailgun imposes a rate limit for the Domains API endpoint. Users may 
+		  issue no more than 300 requests per minute, per account. See the resultant
+		  rate limit response below. 
 
 Example
 ~~~~~~~
